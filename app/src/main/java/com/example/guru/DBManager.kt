@@ -34,7 +34,7 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
         var db: SQLiteDatabase = writableDatabase
 
         db.execSQL(
-            "INSERT INTO MEMBER VALUES ('"+id+"', '"+name+"', "+email+", '" +pw+"','"+pw_re+"');")
+            "INSERT INTO MEMBER VALUES ('"+name+"', '"+email+"', "+id+", '" +pw+"','"+pw_re+"');")
 
 
         db.close()
@@ -70,7 +70,7 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
         while (cursor.moveToNext()) {
             result = (cursor.getString(0))
             if (result.equals(ID)) {
-                if (cursor.getString(1).equals(PW)) {
+                if (cursor.getString(3).equals(PW)) {
                     return true
                     break
                 } else {
