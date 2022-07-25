@@ -9,6 +9,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 
 class MainActivity : AppCompatActivity() {
@@ -26,25 +27,15 @@ class MainActivity : AppCompatActivity() {
         edit_id = findViewById(R.id.edit_id)
         edit_pw = findViewById(R.id.edit_pw)
 
+        var dbManager: DBManager = DBManager(applicationContext, "MEMBER.db", null, 1)
+
         btn_login.setOnClickListener {
-
-            //editText로부터 입력된 값을 받아온다
-            var id = edit_id.text.toString()
-            var pw = edit_pw.text.toString()
-
-            // 쉐어드로부터 저장된 id, pw 가져오기
-            val sharedPreference = getSharedPreferences("file name", Context.MODE_PRIVATE)
-            val savedId = sharedPreference.getString("id", "")
-            val savedPw = sharedPreference.getString("pw", "")
-
-            // 유저가 입력한 id, pw값과 쉐어드로 불러온 id, pw값 비교
-            if(id == savedId && pw == savedPw){
-                // 로그인 성공 다이얼로그 보여주기
-                dialog("success")
-            }
-            else{
-                // 로그인 실패 다이얼로그 보여주기
-                dialog("fail")
+            if(dbManager.getResult1(edit_id.getText().toString(), edit_pw.getText().toString()) == true){
+                Toast.makeText(this,"로그인 성공", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, Second_Activity::class.java)
+                startActivity(intent)
+            }else{
+                Toast.makeText(this,"로그인 실패", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -56,29 +47,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    // 로그인 성공/실패 시 다이얼로그를 띄워주는 메소드
-    fun dialog(type: String){
-        var dialog = AlertDialog.Builder(this)
 
-        if(type.equals("success")){
-            dialog.setTitle("로그인 성공")
-            dialog.setMessage("로그인 성공!")
-        }
-        else if(type.equals("fail")){
-            dialog.setTitle("로그인 실패")
-            dialog.setMessage("아이디와 비밀번호를 확인해주세요")
-        }
 
-        var dialog_listener = object: DialogInterface.OnClickListener{
-            override fun onClick(dialog: DialogInterface?, which: Int) {
-                when(which){
-                    DialogInterface.BUTTON_POSITIVE ->
-                        Log.d(TAG, "")
-                }
-            }
-        }
-
-        dialog.setPositiveButton("확인",dialog_listener)
-        dialog.show()
-    }
-    }
+}
