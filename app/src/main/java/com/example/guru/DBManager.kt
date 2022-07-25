@@ -1,19 +1,19 @@
 package com.example.guru
 
-import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import android.provider.BaseColumns
 
 @Suppress("DEPRECATION")
+
 class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.CursorFactory?, version: Int) :
     SQLiteOpenHelper(context, name, factory, version) {
     override fun onCreate(db: SQLiteDatabase?) {
         if (db != null) {
             db.execSQL(
-                "CREATE TABLE MEMBER(name text, email text, id INTEGER, pw text, pw_re text)"
+                "CREATE TABLE MEMBER(NAME TEST," +
+                        "ID TEXT, PASSWORD TEXT, PASSWORD_OK TEXT, PHONE TEXT, EMAIL TEXT, ADDRESS TEXT, LEVEL TEXT);"
             )
 
         }
@@ -24,21 +24,20 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
     }
 
     fun insert(
-        name: String,
-        id: String,
-        pw: String,
-        pw_re: String,
-        email: String
-
+        name: String, id: String, password: String, password_ok: String, phone: String, email: String,
+        address: String, level: String
     ) {
         var db: SQLiteDatabase = writableDatabase
 
         db.execSQL(
-            "INSERT INTO MEMBER VALUES ('"+name+"', '"+email+"', "+id+", '" +pw+"','"+pw_re+"');")
+            "INSERT INTO MEMBER VALUES('" + name + "'" + ", '" + id + "'" + ", '" + password + "'" + ", '" + password_ok +
+                    "'" + ", '" + phone + "'" + ", '" + email + "'" + ", '" + address + "'" + ", '" + level + "');"
 
-
+        )
         db.close()
     }
+
+
     fun getResult(): String {
         var db: SQLiteDatabase = readableDatabase
         var result: String = ""
@@ -55,6 +54,11 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
                     + " : "
                     + cursor.getString(4)
                     + " : "
+                    + cursor.getString(5)
+                    + " : "
+                    + cursor.getString(6)
+                    + " : "
+                    + cursor.getString(7)
                     + "\n")
 
         }
@@ -62,15 +66,15 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
         return result
     }
 
-    fun getResult1(ID: String, PW: String): Boolean {
+    fun getResult1(ID: String, PASSWORD: String): Boolean {
         var db: SQLiteDatabase = readableDatabase
         var result: String = ""
 
-        var cursor: Cursor = db.rawQuery("SELECT ID, PW FROM MEMBER", null)
+        var cursor: Cursor = db.rawQuery("SELECT ID, PASSWORD FROM MEMBER", null)
         while (cursor.moveToNext()) {
             result = (cursor.getString(0))
             if (result.equals(ID)) {
-                if (cursor.getString(3).equals(PW)) {
+                if (cursor.getString(1).equals(PASSWORD)) {
                     return true
                     break
                 } else {
@@ -83,4 +87,5 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
 
         return false
     }
+
 }

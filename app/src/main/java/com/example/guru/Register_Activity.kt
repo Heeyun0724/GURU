@@ -12,49 +12,61 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 
 class Register_Activity : AppCompatActivity() {
-    val TAG: String = "Register"
-    var isExistBlank = false
-    var isPWSame = false
-
-    lateinit var btn_register: Button
-    lateinit var edit_id: EditText
-    lateinit var edit_name: EditText
-    lateinit var edit_email: EditText
-    lateinit var edit_pw: EditText
-    lateinit var edit_pw_re: EditText
+    lateinit var save_Btn: Button
+    lateinit var back2_Btn: Button
+    lateinit var name: EditText
+    lateinit var password: EditText
+    lateinit var password_ok: EditText
+    lateinit var id: EditText
+    lateinit var email: EditText
+    lateinit var address: EditText
+    lateinit var level: EditText
+    lateinit var phone: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-        btn_register = findViewById(R.id.btn_register)
-        edit_id = findViewById(R.id.edit_id)
-        edit_email = findViewById(R.id.edit_email)
-        edit_name = findViewById(R.id.edit_name)
-        edit_pw = findViewById(R.id.edit_pw)
-        edit_pw_re = findViewById(R.id.edit_pw_re)
-        var dbManager: DBManager = DBManager(applicationContext, "MEMBER.db", null, 1)
+        var dbHelper: DBManager = DBManager(applicationContext, "MEMBER.db", null, 1)
 
-        btn_register.setOnClickListener {
-            Log.d(TAG, "회원가입 버튼 클릭")
-            var id: String = edit_id.getText().toString()
-            var name: String = edit_name.getText().toString()
-            var email: String = edit_email.getText().toString()
-            var pw: String = edit_pw.getText().toString()
-            var pw_re: String = edit_pw_re.getText().toString()
+        save_Btn = findViewById(R.id.save_Btn)
+        back2_Btn = findViewById(R.id.back2_Btn)
+        name = findViewById(R.id.name)
+        password = findViewById(R.id.password)
+        password_ok = findViewById(R.id.password_ok)
+        id = findViewById(R.id.id)
+        email = findViewById(R.id.email)
+        address = findViewById(R.id.address)
+        level = findViewById(R.id.level)
+        phone = findViewById(R.id.phone)
 
 
-            if (id.length == 0 || name.length == 0 || email.length == 0
-                || pw.length == 0 || pw_re.length == 0) {
-                Toast.makeText(this, "회원가입 실패", Toast.LENGTH_SHORT).show()
+        save_Btn.setOnClickListener {
+            // 회원 정보를 저장하는 부분. 데이터베이스에~
+            var name: String = name.getText().toString()
+            var id: String = id.getText().toString()
+            var password: String = password.getText().toString()
+            var password_ok: String = password_ok.getText().toString()
+            var phone: String = phone.getText().toString()
+            var email: String = email.getText().toString()
+            var address: String = address.getText().toString()
+            var level: String = level.getText().toString()
+
+            if (name.length == 0 || id.length == 0 || password.length == 0
+                || password_ok.length == 0 || phone.length == 0 || email.length == 0
+                || address.length == 0 || level.length == 0
+            ) {
+                Toast.makeText(this,"모든 정보를 입력해주세요.", Toast.LENGTH_SHORT).show()
             }else {
-                dbManager.insert(id, name, email, pw, pw_re)
-                Toast.makeText(this, "회원가입 성공", Toast.LENGTH_SHORT).show()
+                dbHelper.insert(name, id, password, password_ok, phone, email, address, level)
+                Toast.makeText(this,"회원가입을 성공하였습니다.", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             }
         }
 
-
-
+        back2_Btn.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
+    }
     }
