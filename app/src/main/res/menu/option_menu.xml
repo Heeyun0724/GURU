@@ -3,22 +3,17 @@
 
     <item
         android:id="@+id/myPageItem"
-        android:title="마이 페이지">
-        <menu>
-            <item
-                android:id="@+id/loginItem"
-                android:title="로그인 정보" />
-            <item
-                android:id="@+id/bookItem"
-                android:title="제작된 책 정보" />
-        </menu>
+        android:title="마이 페이지"
+        android:icon="@drawable/ic_baseline_emoji_emotions_24">
     </item>
 
     <item
-        android:id="@+id/myReviewItem"
-        android:title="마이 리뷰" />
+        android:id="@+id/myHomeItem"
+        android:title="홈"
+        android:icon="@drawable/ic_baseline_home_24"/>
 
     <item
         android:id="@+id/writeReviewItem"
-        android:title="리뷰 작성" />
+        android:title="리뷰 작성"
+        android:icon="@drawable/ic_baseline_menu_book_24"/>
 </menu>
