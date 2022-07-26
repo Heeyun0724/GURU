@@ -22,7 +22,7 @@ class Second_Activity : AppCompatActivity() {
         setContentView(binding.root)
         //setContentView(R.layout.activity_second)
 
-        setFragment(TAG_HOME, HomeFragment())
+        setFragment(TAG_MYPAGE, MypageFragment())
 
         binding.navigationView.setOnItemSelectedListener { item ->
             when(item.itemId) {

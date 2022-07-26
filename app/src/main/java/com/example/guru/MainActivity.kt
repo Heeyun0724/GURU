@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this, Second_Activity::class.java)
                 startActivity(intent)
             }else{
-                Toast.makeText(this,"로그인 성공", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"로그인 실패", Toast.LENGTH_SHORT).show()
             }
         }
 
