@@ -20,7 +20,7 @@ class Second_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setContentView(R.layout.activity_second)
+        //setContentView(R.layout.activity_second)
 
         setFragment(TAG_HOME, HomeFragment())
 
