@@ -37,6 +37,21 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
         db.close()
     }
 
+    fun update(
+        name: String, password: String, password_ok: String, phone: String, email: String,
+        address: String, level: String
+    ) {
+        var db: SQLiteDatabase = writableDatabase
+
+        db.execSQL(
+            "UPDATE MEMBER SET PASSWORD = " + "'" + password + "'" + ", PASSWORD_OK = '" + password_ok + "'" + ", PHONE = '" + phone + "'"
+                    + ", EMAIL = '" + email + "'" + ", ADDRESS = '" + address + "'" + ", LEVEL = '" + level + "'" +
+                    "WHERE NAME = '" + name + "';"
+        )
+
+        db.close()
+    }
+
 
     fun getResult(): String {
         var db: SQLiteDatabase = readableDatabase

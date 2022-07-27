@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F1F8"
+    tools:context=".TechnologyPage">
+
+    <ImageView
+        android:id="@+id/archi_star5"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="104dp"
+        app:layout_constraintStart_toEndOf="@+id/archi_star4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/archi_star4"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/archi_star5"
+        app:layout_constraintStart_toEndOf="@+id/archi_star3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/archi_star1"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/archi_star2"
+        app:layout_constraintStart_toEndOf="@+id/architecture"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/archi_star2"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/archi_star3"
+        app:layout_constraintStart_toEndOf="@+id/archi_star1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/archi_star3"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/archi_star4"
+        app:layout_constraintStart_toEndOf="@+id/archi_star2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/architecture"
+        android:layout_width="106dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/engi_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/technology_archi" />
+
+    <TextView
+        android:id="@+id/archi_review"
+        android:layout_width="249dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text='"감동을 줄 수 없는 건축가가 설 자리는 없다"\n새로운 시대에 맞춰 변화해야 하는 건축의 방향을 제시한 책이다.\n건축종사자, 건축을 공부하는 학생, 건축에 관심이 있는 사람 모두에게 추천하는 최고의 책\n'
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintStart_toEndOf="@+id/architecture"
+        app:layout_constraintTop_toBottomOf="@+id/archi_star3" />
+
+    <TextView
+        android:id="@+id/archi_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="인공지능 시대의 건축"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintBottom_toTopOf="@+id/archi_author"
+        app:layout_constraintStart_toEndOf="@+id/architecture" />
+
+    <TextView
+        android:id="@+id/archi_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="김성아"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintBottom_toTopOf="@+id/archi_star3"
+        app:layout_constraintStart_toEndOf="@+id/architecture" />
+
+    <TextView
+        android:id="@+id/bestReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="BEST REIVEW"
+        android:textColor="#303F9F"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/engineering"
+        android:layout_width="106dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/architecture"
+        app:srcCompat="@drawable/technology_engi" />
+
+    <TextView
+        android:id="@+id/engi_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="처음 읽는 플랜트 엔지니어링 이야기"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintBottom_toTopOf="@+id/engi_author"
+        app:layout_constraintEnd_toStartOf="@+id/engineering"
+        app:layout_constraintTop_toBottomOf="@+id/architecture" />
+
+    <TextView
+        android:id="@+id/engi_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="박정호"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintBottom_toTopOf="@+id/engi_star3"
+        app:layout_constraintEnd_toStartOf="@+id/engineering" />
+
+    <ImageView
+        android:id="@+id/engi_star1"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/engineering"
+        app:layout_constraintTop_toBottomOf="@+id/engi_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/engi_star2"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/engi_star1"
+        app:layout_constraintTop_toBottomOf="@+id/engi_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/engi_star3"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/engi_review"
+        app:layout_constraintEnd_toStartOf="@+id/engi_star2"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/engi_star4"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/engi_star3"
+        app:layout_constraintTop_toBottomOf="@+id/engi_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/engi_star5"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/engi_star4"
+        app:layout_constraintTop_toBottomOf="@+id/engi_author"
+        app:srcCompat="@drawable/star" />
+
+    <TextView
+        android:id="@+id/engi_review"
+        android:layout_width="243dp"
+        android:layout_height="82dp"
+        android:layout_marginEnd="5dp"
+        android:fontFamily="@font/kopubworlddotum"
+        android:text="우리가 일상에서 사용하는 거의 모든 제품이나 에너지가 프렌트를 거쳐 나온다.\n플랜트 엔지니어의 생활을 생생하고 재미있게 소개하여 부담없이 읽을 수 있다. 또한, 책이 읽기 쉽게 구성되어 있어 업계 종사자뿐만 아니라 일반 독자들도 읽기 편한 책"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/engineering"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.562" />
+
+    <ImageView
+        android:id="@+id/IT"
+        android:layout_width="106dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/engineering"
+        app:srcCompat="@drawable/technology_it" />
+
+    <TextView
+        android:id="@+id/it_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="35dp"
+        android:text="구글 엔지니어는 이렇게 일한다"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintStart_toEndOf="@+id/IT"
+        app:layout_constraintTop_toBottomOf="@+id/engineering" />
+
+    <TextView
+        android:id="@+id/it_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="5dp"
+        android:text="타이터스 원터스, 톰 맨쉬렉, 하이럼 라이트"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintStart_toEndOf="@+id/IT"
+        app:layout_constraintTop_toBottomOf="@+id/it_title" />
+
+    <ImageView
+        android:id="@+id/it_star1"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="274dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/IT"
+        app:layout_constraintTop_toBottomOf="@+id/it_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/it_star2"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/it_star1"
+        app:layout_constraintTop_toBottomOf="@+id/it_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/it_star3"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/it_star2"
+        app:layout_constraintTop_toBottomOf="@+id/it_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/it_star4"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/it_star3"
+        app:layout_constraintTop_toBottomOf="@+id/it_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/it_star5"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/it_star4"
+        app:layout_constraintTop_toBottomOf="@+id/it_author"
+        app:srcCompat="@drawable/star" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="247dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:text="이 책 한권이면 소프트웨어 엔지니어링 프로세르를 완벽하게 익히고 좋은 제품을 남들보다 빠르게 구현할 수 있게 됩니다.\n프로그램을 효과적으로 짜는 방법은 물론, 코드베이스를 지속 가능하고 건실하게 만들어주는 엔지니어링 관행까지 모두 소개한다."
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintStart_toEndOf="@+id/IT"
+        app:layout_constraintTop_toBottomOf="@+id/it_star3" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="#303F9F"
+        app:layout_constraintBottom_toTopOf="@+id/architecture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bestReview" />
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="370dp"
+        android:layout_height="1dp"
+        android:background="#C9CCE3"
+        app:layout_constraintBottom_toTopOf="@+id/IT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/engineering" />
+
+    <View
+        android:id="@+id/view11"
+        android:layout_width="370dp"
+        android:layout_height="1dp"
+        android:background="#C9CCE3"
+        app:layout_constraintBottom_toTopOf="@+id/engineering"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/architecture" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
