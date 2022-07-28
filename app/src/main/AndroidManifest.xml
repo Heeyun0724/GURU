@@ -18,9 +18,11 @@
             android:exported="false" />
         <activity
             android:name=".InfoLibraryActivity"
+            android:parentActivityName=".Second_Activity"
             android:exported="false" />
         <activity
             android:name=".ChangeMember"
+            android:parentActivityName=".Second_Activity"
             android:exported="false" />
         <activity
             android:name=".Second_Activity"

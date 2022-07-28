@@ -13,7 +13,7 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
         if (db != null) {
             db.execSQL(
                 "CREATE TABLE MEMBER(NAME TEST," +
-                        "ID TEXT, PASSWORD TEXT, PASSWORD_OK TEXT, PHONE TEXT, EMAIL TEXT, ADDRESS TEXT, LEVEL TEXT, BOOK TEXT, REVIEW TEXT);"
+                        "ID TEXT, PASSWORD TEXT, PASSWORD_OK TEXT, PHONE TEXT, EMAIL TEXT, ADDRESS TEXT, LEVEL TEXT);"
 
 
             )
@@ -39,17 +39,7 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
         db.close()
     }
 
-    fun bookinsert(
-        book: String, review: String
-    ) {
-        var db: SQLiteDatabase = writableDatabase
 
-        db.execSQL(
-            "INSERT INTO MEMBER VALUES('" + book + "'" + ", '" + review + "');"
-
-        )
-        db.close()
-    }
 
     fun update(
         name: String, password: String, password_ok: String, phone: String, email: String,
