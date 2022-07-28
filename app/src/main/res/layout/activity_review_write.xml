@@ -7,7 +7,6 @@
     tools:context=".ReviewFragment">
 
     <EditText
-        android:fontFamily="@font/kopubworlddotum"
         android:id="@+id/bookname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,7 +21,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
-
         android:id="@+id/radioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,7 +32,6 @@
         app:layout_constraintTop_toBottomOf="@+id/bookname">
 
         <RadioButton
-            android:fontFamily="@font/kopubworlddotum"
             android:id="@+id/star_radio1"
             android:layout_width="70dp"
             android:layout_height="49dp"
@@ -45,7 +42,6 @@
             app:layout_constraintTop_toBottomOf="@+id/bookname" />
 
         <RadioButton
-            android:fontFamily="@font/kopubworlddotum"
             android:id="@+id/star_radio2"
             android:layout_width="70dp"
             android:layout_height="49dp"
@@ -55,7 +51,6 @@
             app:layout_constraintTop_toBottomOf="@+id/bookname" />
 
         <RadioButton
-            android:fontFamily="@font/kopubworlddotum"
             android:id="@+id/star_radio3"
             android:layout_width="70dp"
             android:layout_height="49dp"
@@ -65,7 +60,6 @@
             app:layout_constraintTop_toBottomOf="@+id/bookname" />
 
         <RadioButton
-            android:fontFamily="@font/kopubworlddotum"
             android:id="@+id/star_radio4"
             android:layout_width="70dp"
             android:layout_height="49dp"
@@ -75,7 +69,6 @@
             app:layout_constraintTop_toBottomOf="@+id/bookname" />
 
         <RadioButton
-            android:fontFamily="@font/kopubworlddotum"
             android:id="@+id/star_radio5"
             android:layout_width="70dp"
             android:layout_height="49dp"
@@ -86,7 +79,6 @@
     </RadioGroup>
 
     <TextView
-        android:fontFamily="@font/kopubworlddotum"
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -99,7 +91,6 @@
         app:layout_constraintTop_toBottomOf="@+id/bookname" />
 
     <MultiAutoCompleteTextView
-        android:fontFamily="@font/kopubworlddotum"
         android:id="@+id/review"
         android:layout_width="match_parent"
         android:layout_height="424dp"
@@ -108,6 +99,7 @@
         android:hint="리뷰의 내용을 입력해주세요."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
 
     <Button
         android:id="@+id/complete"

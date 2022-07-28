@@ -41,6 +41,8 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
 
 
 
+
+
     fun update(
         name: String, password: String, password_ok: String, phone: String, email: String,
         address: String, level: String
