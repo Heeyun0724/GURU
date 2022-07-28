@@ -1,6 +1,5 @@
 package com.example.guru
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.recyclerview.widget.RecyclerView
+import android.widget.TextView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,18 +25,12 @@ class MypageFragment : Fragment() {
     private var param2: String? = null
     lateinit var memchangeButton: Button
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
-
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-
-
-
     }
 
     override fun onCreateView(
@@ -45,20 +38,49 @@ class MypageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_mypage, container, false)
-        val memchangeButton: Button = view.findViewById(R.id.memchange_Button)
+
+        val idTextView = view.findViewById<TextView>(R.id.idTextView)
+        val memchangeButton: Button = view.findViewById(R.id.memchangeButton)
+        val logoutButton = view.findViewById<Button>(R.id.logoutButton)
+        val libraryinfoButton = view.findViewById<Button>(R.id.libraryinfoButton)
+
+        // 공유 자원을 통해 id 관리
+        var pref = requireActivity().getSharedPreferences("user",0)
+        var login_id = pref.getString("id", "default").toString()
+
+        idTextView.text = login_id
+
+        //mypage_Btn.setOnClickListener {
+        //Toast.makeText(getActivity(),"Toast Message",Toast.LENGTH_SHORT).show();
+        //}
+
         // Inflate the layout for this fragment
 
         memchangeButton.setOnClickListener {
             val intent = Intent(context, ChangeMember::class.java)
             startActivity(intent)
         }
+
+        libraryinfoButton.setOnClickListener(object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(context, InfoLibraryActivity::class.java)
+                startActivity(intent)
+            }
+        })
+
+        logoutButton.setOnClickListener(object :View.OnClickListener {
+            override fun onClick(v: View?) {
+                val intent = Intent(context, MainActivity::class.java)
+                startActivity(intent)
+            }
+        })
+
         return view
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
     }
-
 
     companion object {
         /**

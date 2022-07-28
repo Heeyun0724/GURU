@@ -27,16 +27,25 @@ class MainActivity : AppCompatActivity() {
         editText2 = findViewById(R.id.editText2)
         var dbHelper: DBManager = DBManager(applicationContext, "MEMBER.db", null, 1)
 
+        //로그인 버튼을 눌렀을 시 실행될 함수
         login_Btn.setOnClickListener {
             if(dbHelper.getResult1(editText.getText().toString(), editText2.getText().toString()) == true){
                 Toast.makeText(this,"로그인 성공", Toast.LENGTH_SHORT).show()
+                val id = editText.getText().toString()
+
+                // 공유 자원을 통해 id 관리
+                var pref = this.getSharedPreferences("user",0)
+                var editor = pref.edit()
+                editor.putString("id", id)
+                editor.apply()
+
                 val intent = Intent(this, Second_Activity::class.java)
                 startActivity(intent)
             }else{
                 Toast.makeText(this,"로그인 실패", Toast.LENGTH_SHORT).show()
             }
         }
-
+        //회원가입 버튼을 눌렀을 시 실행될 함수
         register_Btn.setOnClickListener {
             val intent = Intent(this, Register_Activity::class.java)
             startActivity(intent)
