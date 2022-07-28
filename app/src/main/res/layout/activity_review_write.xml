@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReviewFragment">
+
+    <EditText
+        android:fontFamily="@font/kopubworlddotum"
+        android:id="@+id/bookname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="책 제목"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookname">
+
+        <RadioButton
+            android:fontFamily="@font/kopubworlddotum"
+            android:id="@+id/star_radio1"
+            android:layout_width="70dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:text="5개"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/bookname" />
+
+        <RadioButton
+            android:fontFamily="@font/kopubworlddotum"
+            android:id="@+id/star_radio2"
+            android:layout_width="70dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="5dp"
+            android:text="4개"
+            app:layout_constraintStart_toEndOf="@+id/star_radio1"
+            app:layout_constraintTop_toBottomOf="@+id/bookname" />
+
+        <RadioButton
+            android:fontFamily="@font/kopubworlddotum"
+            android:id="@+id/star_radio3"
+            android:layout_width="70dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="5dp"
+            android:text="3개"
+            app:layout_constraintStart_toEndOf="@+id/star_radio2"
+            app:layout_constraintTop_toBottomOf="@+id/bookname" />
+
+        <RadioButton
+            android:fontFamily="@font/kopubworlddotum"
+            android:id="@+id/star_radio4"
+            android:layout_width="70dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="5dp"
+            android:text="2개"
+            app:layout_constraintStart_toEndOf="@+id/star_radio3"
+            app:layout_constraintTop_toBottomOf="@+id/bookname" />
+
+        <RadioButton
+            android:fontFamily="@font/kopubworlddotum"
+            android:id="@+id/star_radio5"
+            android:layout_width="70dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="5dp"
+            android:text="1개"
+            app:layout_constraintStart_toEndOf="@+id/star_radio4"
+            app:layout_constraintTop_toBottomOf="@+id/bookname" />
+    </RadioGroup>
+
+    <TextView
+        android:fontFamily="@font/kopubworlddotum"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:text="별"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookname" />
+
+    <MultiAutoCompleteTextView
+        android:fontFamily="@font/kopubworlddotum"
+        android:id="@+id/review"
+        android:layout_width="match_parent"
+        android:layout_height="424dp"
+        android:layout_marginTop="15dp"
+        android:gravity="clip_horizontal"
+        android:hint="리뷰의 내용을 입력해주세요."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

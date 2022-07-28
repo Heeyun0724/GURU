@@ -13,7 +13,9 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
         if (db != null) {
             db.execSQL(
                 "CREATE TABLE MEMBER(NAME TEST," +
-                        "ID TEXT, PASSWORD TEXT, PASSWORD_OK TEXT, PHONE TEXT, EMAIL TEXT, ADDRESS TEXT, LEVEL TEXT);"
+                        "ID TEXT, PASSWORD TEXT, PASSWORD_OK TEXT, PHONE TEXT, EMAIL TEXT, ADDRESS TEXT, LEVEL TEXT, BOOK TEXT, REVIEW TEXT);"
+
+
             )
 
         }
@@ -32,6 +34,18 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
         db.execSQL(
             "INSERT INTO MEMBER VALUES('" + name + "'" + ", '" + id + "'" + ", '" + password + "'" + ", '" + password_ok +
                     "'" + ", '" + phone + "'" + ", '" + email + "'" + ", '" + address + "'" + ", '" + level + "');"
+
+        )
+        db.close()
+    }
+
+    fun bookinsert(
+        book: String, review: String
+    ) {
+        var db: SQLiteDatabase = writableDatabase
+
+        db.execSQL(
+            "INSERT INTO MEMBER VALUES('" + book + "'" + ", '" + review + "');"
 
         )
         db.close()

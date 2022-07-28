@@ -27,6 +27,7 @@ class MypageFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
@@ -43,6 +44,7 @@ class MypageFragment : Fragment() {
         val memchangeButton: Button = view.findViewById(R.id.memchangeButton)
         val logoutButton = view.findViewById<Button>(R.id.logoutButton)
         val libraryinfoButton = view.findViewById<Button>(R.id.libraryinfoButton)
+
 
         // 공유 자원을 통해 id 관리
         var pref = requireActivity().getSharedPreferences("user",0)
