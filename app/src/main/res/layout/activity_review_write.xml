@@ -7,6 +7,7 @@
     tools:context=".ReviewFragment">
 
     <EditText
+        android:fontFamily="@font/kopubworlddotum"
         android:id="@+id/bookname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,65 +21,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="right"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bookname">
-
-        <RadioButton
-            android:id="@+id/star_radio1"
-            android:layout_width="70dp"
-            android:layout_height="49dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
-            android:text="5개"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/bookname" />
-
-        <RadioButton
-            android:id="@+id/star_radio2"
-            android:layout_width="70dp"
-            android:layout_height="49dp"
-            android:layout_marginTop="5dp"
-            android:text="4개"
-            app:layout_constraintStart_toEndOf="@+id/star_radio1"
-            app:layout_constraintTop_toBottomOf="@+id/bookname" />
-
-        <RadioButton
-            android:id="@+id/star_radio3"
-            android:layout_width="70dp"
-            android:layout_height="49dp"
-            android:layout_marginTop="5dp"
-            android:text="3개"
-            app:layout_constraintStart_toEndOf="@+id/star_radio2"
-            app:layout_constraintTop_toBottomOf="@+id/bookname" />
-
-        <RadioButton
-            android:id="@+id/star_radio4"
-            android:layout_width="70dp"
-            android:layout_height="49dp"
-            android:layout_marginTop="5dp"
-            android:text="2개"
-            app:layout_constraintStart_toEndOf="@+id/star_radio3"
-            app:layout_constraintTop_toBottomOf="@+id/bookname" />
-
-        <RadioButton
-            android:id="@+id/star_radio5"
-            android:layout_width="70dp"
-            android:layout_height="49dp"
-            android:layout_marginTop="5dp"
-            android:text="1개"
-            app:layout_constraintStart_toEndOf="@+id/star_radio4"
-            app:layout_constraintTop_toBottomOf="@+id/bookname" />
-    </RadioGroup>
-
     <TextView
+        android:fontFamily="@font/kopubworlddotum"
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -93,21 +37,35 @@
     <MultiAutoCompleteTextView
         android:id="@+id/review"
         android:layout_width="match_parent"
-        android:layout_height="424dp"
-        android:layout_marginTop="15dp"
+        android:layout_height="420dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/kopubworlddotum"
         android:gravity="clip_horizontal"
         android:hint="리뷰의 내용을 입력해주세요."
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radioGroup" />
-
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/complete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
+        android:fontFamily="@font/kopubworlddotum"
         android:text="작성 완료"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/review" />
+
+    <EditText
+        android:id="@+id/star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="7dp"
+        android:ems="10"
+        android:hint="1~5 숫자만 입력해주세요"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/bookname" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
