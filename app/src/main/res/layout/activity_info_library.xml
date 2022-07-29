@@ -67,7 +67,7 @@
         android:layout_marginTop="24dp"
         android:fontFamily="@font/kopubworlddotum"
         android:gravity="center"
-        android:text="어려운 책 선택, 문냥 도서관에서 해결하자!\n다양한 도서 리뷰를 보고, 또 직접 쓰며 \n문냥과 함께 달에서 나만의 리뷰 책을 만들어 봅시다."
+        android:text="어려운 책 선택, 문냥 도서관에서 해결하자!\n다양한 도서 리뷰를 보고, 또 직접 쓰며 \n문냥과 함께 달에서 리뷰 책을 만들어 봅시다."
         android:textColor="@color/black"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
