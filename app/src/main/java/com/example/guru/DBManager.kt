@@ -44,13 +44,13 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
 
 
     fun update(
-        name: String, password: String, password_ok: String, phone: String, email: String,
+        name: String, id: String, password: String, password_ok: String, phone: String, email: String,
         address: String, level: String
     ) {
         var db: SQLiteDatabase = writableDatabase
 
         db.execSQL(
-            "UPDATE MEMBER SET PASSWORD = " + "'" + password + "'" + ", PASSWORD_OK = '" + password_ok + "'" + ", PHONE = '" + phone + "'"
+            "UPDATE MEMBER SET ID = " + "'" + id + "'" + ", PASSWORD = '" + password + "'" + ", PASSWORD_OK = '" + password_ok + "'" + ", PHONE = '" + phone + "'"
                     + ", EMAIL = '" + email + "'" + ", ADDRESS = '" + address + "'" + ", LEVEL = '" + level + "'" +
                     "WHERE NAME = '" + name + "';"
         )
@@ -101,6 +101,23 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
                 } else {
                     return false
                 }
+            }else {
+
+            }
+        }
+
+        return false
+    }
+
+    fun getResult2(ID: String): Boolean {
+        var db: SQLiteDatabase = readableDatabase
+        var result: String = ""
+
+        var cursor: Cursor = db.rawQuery("SELECT ID FROM MEMBER", null)
+        while (cursor.moveToNext()) {
+            result = (cursor.getString(0))
+            if (result.equals(ID)) {
+               return true
             }else {
 
             }
