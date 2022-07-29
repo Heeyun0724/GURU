@@ -14,17 +14,20 @@
         android:theme="@style/Theme.GURU"
         tools:targetApi="31">
         <activity
-            android:name=".ReviewWrite"
-            android:parentActivityName=".Second_Activity"
+            android:name=".ReviewList"
             android:exported="false" />
+        <activity
+            android:name=".ReviewWrite"
+            android:exported="false"
+            android:parentActivityName=".Second_Activity" />
         <activity
             android:name=".InfoLibraryActivity"
-            android:parentActivityName=".Second_Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Second_Activity" />
         <activity
             android:name=".ChangeMember"
-            android:parentActivityName=".Second_Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Second_Activity" />
         <activity
             android:name=".Second_Activity"
             android:exported="false" />

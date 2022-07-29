@@ -41,7 +41,7 @@ class ReviewFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_review, container, false)
         val reviewButton: Button = view.findViewById(R.id.reviewButton)
-
+        val listButton: Button = view.findViewById(R.id.listButton)
         val idTextView = view.findViewById<TextView>(R.id.idTextView)
 
         // 공유 자원을 통해 id 관리
@@ -52,6 +52,10 @@ class ReviewFragment : Fragment() {
 
         reviewButton.setOnClickListener {
             val intent = Intent(context, ReviewWrite::class.java)
+            startActivity(intent)
+        }
+        listButton.setOnClickListener {
+            val intent = Intent(context, ReviewList::class.java)
             startActivity(intent)
         }
 

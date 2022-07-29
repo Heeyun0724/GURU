@@ -17,6 +17,7 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
 
 
             )
+            db!!.execSQL("CREATE TABLE REVIEW ( bName TEXT , rStar TEXT ,rContent TEXT);")
 
         }
     }
@@ -24,6 +25,7 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
 
     }
+
 
     fun insert(
         name: String, id: String, password: String, password_ok: String, phone: String, email: String,
@@ -39,7 +41,14 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
         db.close()
     }
 
+    fun reviewinsert(
+        bname: String, rstar: String, rcontent: String
+    ) {
+        var db: SQLiteDatabase = writableDatabase
 
+        db.execSQL("INSERT INTO REVIEW VALUES('" + bname + "', '" + rstar + "', '" + rcontent + "');" )
+        db.close()
+    }
 
 
 
@@ -81,6 +90,26 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
                     + " : "
                     + cursor.getString(7)
                     + "\n")
+
+        }
+
+        return result
+    }
+
+    fun getrvResult(): String {
+        var db: SQLiteDatabase = readableDatabase
+        var result: String = ""
+
+        var cursor: Cursor = db.rawQuery("SELECT * FROM REVIEW", null)
+        while (cursor.moveToNext()) {
+            result += (cursor.getString(0)
+                    + " \n "
+                    + cursor.getString(1)
+                    + " \n "
+                    + cursor.getString(2)
+                    +"\n"
+                    + "----------------------------"
+                    +"\n")
 
         }
 
