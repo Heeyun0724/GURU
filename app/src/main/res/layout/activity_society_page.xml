@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F1F8"
+    tools:context=".SocietyPageActivity">
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="370dp"
+        android:layout_height="1dp"
+        android:background="#C9CCE3"
+        app:layout_constraintBottom_toTopOf="@+id/society"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/management" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="370dp"
+        android:layout_height="1dp"
+        android:background="#C9CCE3"
+        app:layout_constraintBottom_toTopOf="@+id/management"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/politics" />
+
+    <TextView
+        android:id="@+id/bestReview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="BEST REIVEW"
+        android:textColor="#303F9F"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/pol_star4"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/pol_star3"
+        app:layout_constraintTop_toBottomOf="@+id/pol_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/pol_star5"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/pol_star4"
+        app:layout_constraintTop_toBottomOf="@+id/pol_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/pol_star2"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/pol_star1"
+        app:layout_constraintTop_toBottomOf="@+id/pol_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/politics"
+        android:layout_width="106dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/society_pol" />
+
+    <TextView
+        android:id="@+id/pol_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="계속 가보겠습니다"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintBottom_toTopOf="@+id/pol_author"
+        app:layout_constraintStart_toEndOf="@+id/politics" />
+
+    <TextView
+        android:id="@+id/pol_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="5dp"
+        android:text="임은정"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintBottom_toTopOf="@+id/pol_star3"
+        app:layout_constraintStart_toEndOf="@+id/politics" />
+
+    <ImageView
+        android:id="@+id/pol_star1"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/politics"
+        app:layout_constraintTop_toBottomOf="@+id/pol_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/pol_star3"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/pol_review"
+        app:layout_constraintStart_toEndOf="@+id/pol_star2"
+        app:srcCompat="@drawable/star" />
+
+    <TextView
+        android:id="@+id/pol_review"
+        android:layout_width="233dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="32dp"
+        android:text="&quot;역사는 행동하는 사람들에 의해 쓰인다. 내 의지가 그 시기를 앞당기리라고 믿는다.&quot;\n이 책을 통해 검찰 조직의 어두운 면과 이를 걷어내고자 하는 저자의 각오와 용기, 그리고 그 과정에서 내부 고발자의 힘겨움과 아픔을 느낄 수 있다는 점이 좋았다."
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintBottom_toTopOf="@+id/management"
+        app:layout_constraintStart_toEndOf="@+id/politics" />
+
+    <ImageView
+        android:id="@+id/management"
+        android:layout_width="106dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/politics"
+        app:srcCompat="@drawable/society_man" />
+
+    <TextView
+        android:id="@+id/man_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="5dp"
+        android:text="왜 지금 한국인가"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintEnd_toStartOf="@+id/management"
+        app:layout_constraintTop_toBottomOf="@+id/politics" />
+
+    <TextView
+        android:id="@+id/man_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="가재산, 김기진"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintEnd_toStartOf="@+id/management"
+        app:layout_constraintTop_toBottomOf="@+id/man_title" />
+
+    <ImageView
+        android:id="@+id/man_star1"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/management"
+        app:layout_constraintTop_toBottomOf="@+id/man_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/man_star2"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/man_star1"
+        app:layout_constraintTop_toBottomOf="@+id/man_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/man_star3"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/man_star2"
+        app:layout_constraintTop_toBottomOf="@+id/man_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/man_star4"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/man_star3"
+        app:layout_constraintTop_toBottomOf="@+id/man_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/man_star5"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/man_star4"
+        app:layout_constraintTop_toBottomOf="@+id/man_author"
+        app:srcCompat="@drawable/star" />
+
+    <TextView
+        android:id="@+id/man_review"
+        android:layout_width="260dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/kopubworlddotum"
+        android:text="한국인은 빨리빨리 서두르는 근성과 끈기 있게 지속하는 기질을 동시에 가지고 있다. 우리는 스스로 주체가 되어 의사를 결정하는 것에 익숙하고, 창의적이고 독창적인 일을 맡기면 고도의 집중력을 발휘할 수 있을 것이다. 이 책을 통해 한국인만의 기질과 특성을 살린 한국형 경영 기법을 구축할 수 있을 것이다."
+        android:textColor="#000000"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/society"
+        app:layout_constraintEnd_toStartOf="@+id/management"
+        app:layout_constraintTop_toBottomOf="@+id/man_star3" />
+
+    <ImageView
+        android:id="@+id/society"
+        android:layout_width="106dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/management"
+        app:srcCompat="@drawable/society_soci" />
+
+    <TextView
+        android:id="@+id/soci_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="35dp"
+        android:text="식량위기 대한민국"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintStart_toEndOf="@+id/society"
+        app:layout_constraintTop_toBottomOf="@+id/management" />
+
+    <TextView
+        android:id="@+id/soci_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:text="남재작"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/society"
+        app:layout_constraintTop_toBottomOf="@+id/soci_title" />
+
+    <ImageView
+        android:id="@+id/soci_star1"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/society"
+        app:layout_constraintTop_toBottomOf="@+id/soci_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/soci_star2"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/soci_star1"
+        app:layout_constraintTop_toBottomOf="@+id/soci_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/soci_star3"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/soci_star2"
+        app:layout_constraintTop_toBottomOf="@+id/soci_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/soci_star4"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/soci_star3"
+        app:layout_constraintTop_toBottomOf="@+id/soci_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/soci_star5"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/soci_star4"
+        app:layout_constraintTop_toBottomOf="@+id/soci_author"
+        app:srcCompat="@drawable/star" />
+
+    <TextView
+        android:id="@+id/soci_review"
+        android:layout_width="257dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:text="지구온난화와 식량위기의 직접적 인과관계를 세밀하게 분석한 책이다.\n이 책을 읽은 후 지구온난화와 식량에 대한 밀접적인 관계를 깨닫고 이에대해 더 진지하게 생각해 본다면 지구에 남은 희망이 있을지도 모른다."
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintStart_toEndOf="@+id/society"
+        app:layout_constraintTop_toBottomOf="@+id/soci_star3" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="#303F9F"
+        app:layout_constraintBottom_toTopOf="@+id/politics"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bestReview2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

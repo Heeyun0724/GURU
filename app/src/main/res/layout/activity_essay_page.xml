@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F1F8"
+    tools:context=".EssayPageActivity">
+
+    <View
+        android:id="@+id/view13"
+        android:layout_width="370dp"
+        android:layout_height="1dp"
+        android:background="#C9CCE3"
+        app:layout_constraintBottom_toTopOf="@+id/life"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swim" />
+
+    <View
+        android:id="@+id/view12"
+        android:layout_width="370dp"
+        android:layout_height="1dp"
+        android:background="#C9CCE3"
+        app:layout_constraintBottom_toTopOf="@+id/swim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poo" />
+
+    <TextView
+        android:id="@+id/bestReview3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="BEST REIVEW"
+        android:textColor="#303F9F"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/poo_star2"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/poo_star1"
+        app:layout_constraintTop_toBottomOf="@+id/poo_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/poo_star4"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/poo_star3"
+        app:layout_constraintTop_toBottomOf="@+id/poo_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/poo_star5"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/poo_star4"
+        app:layout_constraintTop_toBottomOf="@+id/poo_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/poo"
+        android:layout_width="106dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/essay_poo" />
+
+    <TextView
+        android:id="@+id/poo_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="5dp"
+        android:text="곰돌이 푸, 행복한 일은 매일 있어"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintBottom_toTopOf="@+id/poo_author"
+        app:layout_constraintStart_toEndOf="@+id/poo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/poo_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="5dp"
+        android:text="곰돌이 푸 (원작)"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintBottom_toTopOf="@+id/poo_star3"
+        app:layout_constraintStart_toEndOf="@+id/poo" />
+
+    <ImageView
+        android:id="@+id/poo_star1"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/poo"
+        app:layout_constraintTop_toBottomOf="@+id/poo_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/poo_star3"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/poo_review"
+        app:layout_constraintStart_toEndOf="@+id/poo_star2"
+        app:srcCompat="@drawable/star" />
+
+    <TextView
+        android:id="@+id/poo_review"
+        android:layout_width="261dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="40dp"
+        android:text="휘몰아치는 삶에 지친 사람들에게 추천하는 책.\n지금은 어른이지만 한 때는 어린이였던 나에게 주는 삶과 행복의 메세지를 전해주는 따뜻한 책임.\n어떤 일이든 긍적적으로 바라보며, 직접 행동으로 부딪히는 푸를 통해 삶의 행복함을 다시 찾을 수 있기를 바람!"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintBottom_toTopOf="@+id/swim"
+        app:layout_constraintStart_toEndOf="@+id/poo" />
+
+    <ImageView
+        android:id="@+id/swim"
+        android:layout_width="106dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poo"
+        app:srcCompat="@drawable/essay_swim" />
+
+    <TextView
+        android:id="@+id/swim_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="5dp"
+        android:text="매일을 헤엄치는 법"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintEnd_toStartOf="@+id/swim"
+        app:layout_constraintTop_toBottomOf="@+id/poo" />
+
+    <TextView
+        android:id="@+id/swim_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="이연"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintEnd_toStartOf="@+id/swim"
+        app:layout_constraintTop_toBottomOf="@+id/swim_title" />
+
+    <ImageView
+        android:id="@+id/swim_star1"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/swim"
+        app:layout_constraintTop_toBottomOf="@+id/swim_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/swim_star2"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@id/swim_star1"
+        app:layout_constraintTop_toBottomOf="@+id/swim_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/swim_star3"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@id/swim_star2"
+        app:layout_constraintTop_toBottomOf="@+id/swim_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/swim_star4"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@id/swim_star3"
+        app:layout_constraintTop_toBottomOf="@+id/swim_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/swim_star5"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintEnd_toStartOf="@id/swim_star4"
+        app:layout_constraintTop_toBottomOf="@+id/swim_author"
+        app:srcCompat="@drawable/star" />
+
+    <TextView
+        android:id="@+id/swim_review"
+        android:layout_width="266dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="독자들에게 주체적인 삶의 태도와 자세를 전해온 독보적인 그림 에세이!\n바닥에 가라앉아 있다고 생각하는 사람들에게 바닥을 딛고 떠올라 저만의 방향으로 더 높이, 더 멀리 헤엄칠 수 있는 힘과 희망을 전해준다.\n자신을 탐색하고 싶은 독자들에게 추천!"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintEnd_toStartOf="@+id/swim"
+        app:layout_constraintTop_toBottomOf="@+id/swim_star3" />
+
+    <ImageView
+        android:id="@+id/life"
+        android:layout_width="106dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/swim"
+        app:srcCompat="@drawable/essay_life" />
+
+    <TextView
+        android:id="@+id/life_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="35dp"
+        android:text="삶으로 다시 떠오르기"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintStart_toEndOf="@+id/life"
+        app:layout_constraintTop_toBottomOf="@+id/swim" />
+
+    <TextView
+        android:id="@+id/life_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:text="에크하르트 톨레"
+        android:textColor="#000000"
+        android:textSize="8sp"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintStart_toEndOf="@+id/life"
+        app:layout_constraintTop_toBottomOf="@+id/life_title" />
+
+    <ImageView
+        android:id="@+id/life_star1"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@+id/life"
+        app:layout_constraintTop_toBottomOf="@+id/life_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/life_star2"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/life_star1"
+        app:layout_constraintTop_toBottomOf="@+id/life_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/life_star3"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/life_star2"
+        app:layout_constraintTop_toBottomOf="@+id/life_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/life_star4"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/life_star3"
+        app:layout_constraintTop_toBottomOf="@+id/life_author"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/life_star5"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/life_star4"
+        app:layout_constraintTop_toBottomOf="@+id/life_author"
+        app:srcCompat="@drawable/star" />
+
+    <TextView
+        android:id="@+id/life_review"
+        android:layout_width="261dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:text="이 책은 일화와 철학적 내용을 통해 모든 고통과 불행의 원인인 '자기 자신'이라는 감오겡서 나와 '나는 누구인지'를 깨닫고 진정한 삶으로 다시 떠오르는 길을 제시한다.\n'나'에 대해 생각하게 되는 책으로, 나에 대한 방황이 있을 때 추천하는 책.\n선물용으로도 최고!"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:fontFamily="@font/kopubworlddotum"
+        app:layout_constraintStart_toEndOf="@+id/life"
+        app:layout_constraintTop_toBottomOf="@+id/life_star3" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="#303F9F"
+        app:layout_constraintBottom_toTopOf="@+id/poo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bestReview3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
