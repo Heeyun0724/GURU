@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper
 
 @Suppress("DEPRECATION")
 
-class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.CursorFactory?, version: Int) :
+class  DBManager(context: Context?, name: String?, factory: SQLiteDatabase.CursorFactory?, version: Int) :
     SQLiteOpenHelper(context, name, factory, version) {
     override fun onCreate(db: SQLiteDatabase?) {
         if (db != null) {
@@ -102,14 +102,13 @@ class DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Cursor
 
         var cursor: Cursor = db.rawQuery("SELECT * FROM REVIEW", null)
         while (cursor.moveToNext()) {
-            result += (cursor.getString(0)
-                    + " \n "
+            result += ("\n[책 제목]\n"
+                    + cursor.getString(0)
+                    + "\n[별   점]\n"
                     + cursor.getString(1)
-                    + " \n "
+                    + "\n[리   뷰] \n"
                     + cursor.getString(2)
-                    +"\n"
-                    + "----------------------------"
-                    +"\n")
+                    + "-------------------------------------")
 
         }
 
