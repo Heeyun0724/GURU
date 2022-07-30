@@ -12,6 +12,7 @@ class EssayPage : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
     }
 
+    
     //뒤로가기 코드
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.getItemId() === android.R.id.home) {
