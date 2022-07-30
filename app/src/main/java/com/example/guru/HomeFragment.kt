@@ -1,59 +1,78 @@
 package com.example.guru
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageView
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.viewpager2.widget.ViewPager2
+import com.example.guru.*
+import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+import kotlin.concurrent.timer
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+private const val NUM_PAGES = 3
 
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class HomeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    lateinit var technologyImage: ImageView
+    lateinit var literatureImage: ImageView
+    lateinit var societyImage: ImageView
+    lateinit var essayImage: ImageView
+    lateinit var searchButton: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
-    }
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        technologyImage = view.findViewById<ImageView>(R.id.technologyImage)
+        literatureImage = view.findViewById<ImageView>(R.id.literatureImage)
+        societyImage = view.findViewById<ImageView>(R.id.societyImage)
+        essayImage = view.findViewById<ImageView>(R.id.essayImage)
+        searchButton = view.findViewById(R.id.searchButton)
+
+        //기술 이미지 클릭 시 기술분야 베스트리뷰 페이지로 이동
+        technologyImage.setOnClickListener{
+            var intent = Intent(getActivity(), TechnologyPageActivity::class.java)
+            startActivity(intent)
+        }
+        //문학 이미지 클릭 시 문학분야 베스트리뷰 페이지로 이동
+        literatureImage.setOnClickListener{
+            var intent = Intent(getActivity(), LiteraturePageActivity::class.java)
+            startActivity(intent)
+        }
+        //사회 이미지 클릭 시 사회분야 베스트리뷰 페이지로 이동
+        societyImage.setOnClickListener{
+            var intent = Intent(getActivity(), SocietyPageActivity::class.java)
+            startActivity(intent)
+        }
+        //에세이 이미지 클릭 시 에세이분야 베스트리뷰 페이지로 이동
+        essayImage.setOnClickListener{
+            var intent = Intent(getActivity(), EssayPageActivity::class.java)
+            startActivity(intent)
+        }
+        //리뷰 검색하기 버튼 클릭 시 검색 페이지로 이동
+        searchButton.setOnClickListener{
+            var intent = Intent(getActivity(), SearchActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        return view
     }
 }
