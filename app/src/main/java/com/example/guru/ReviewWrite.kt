@@ -30,21 +30,30 @@ class ReviewWrite : AppCompatActivity() {
         completeButton=findViewById(R.id.complete)
         var dbHelper: DBManager = DBManager(applicationContext, "REVIEW.db", null, 1)
 
+
         //myHelper = myDBHelper(this)
+
+        //테이블 생성
+
+        //작성 완료 버튼 클릭시 동작 수행 코드
+
         completeButton.setOnClickListener {
             var bname:String = bookName.getText().toString()
             var rstar:String = star.getText().toString()
             var rcontent:String = review.getText().toString()
 
             dbHelper.reviewinsert(bname, rstar, rcontent)
+
             Toast.makeText(applicationContext, "작성됨", Toast.LENGTH_SHORT).show()
         }
-
-
-
     }
 
-
-
-
+    //액션바 뒤로가기 코드
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.getItemId() === android.R.id.home) {
+            finish()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
 }
