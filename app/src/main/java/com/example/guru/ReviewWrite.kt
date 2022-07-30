@@ -31,7 +31,7 @@ class ReviewWrite : AppCompatActivity() {
         var dbHelper: DBManager = DBManager(applicationContext, "REVIEW.db", null, 1)
 
 
-        //myHelper = myDBHelper(this)
+        myHelper = myDBHelper(this)
 
         //테이블 생성
 
