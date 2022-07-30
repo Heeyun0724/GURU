@@ -30,10 +30,8 @@ class ReviewWrite : AppCompatActivity() {
         completeButton=findViewById(R.id.complete)
         var dbHelper: DBManager = DBManager(applicationContext, "REVIEW.db", null, 1)
 
-
-        myHelper = myDBHelper(this)
-
         //테이블 생성
+        myHelper = myDBHelper(this)
 
         //작성 완료 버튼 클릭시 동작 수행 코드
 
