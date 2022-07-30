@@ -67,10 +67,10 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
         //리뷰 검색하기 버튼 클릭 시 검색 페이지로 이동
-        searchButton.setOnClickListener{
-            var intent = Intent(getActivity(), SearchActivity::class.java)
-            startActivity(intent)
-        }
+        //searchButton.setOnClickListener{
+        //var intent = Intent(getActivity(), SearchActivity::class.java)
+        //startActivity(intent)
+        // }
 
 
         return view

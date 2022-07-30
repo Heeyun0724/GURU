@@ -49,11 +49,12 @@ class ReviewFragment : Fragment() {
         var login_id = pref.getString("id", "default").toString()
 
         idTextView.text = login_id
-
+        //리뷰 버튼을 누르면 리뷰 작성 페이지로 넘어감
         reviewButton.setOnClickListener {
             val intent = Intent(context, ReviewWrite::class.java)
             startActivity(intent)
         }
+        //리스트 버튼을 누르면 리스트 페이지로 넘어감
         listButton.setOnClickListener {
             val intent = Intent(context, ReviewList::class.java)
             startActivity(intent)

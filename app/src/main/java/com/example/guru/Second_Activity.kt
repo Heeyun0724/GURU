@@ -54,7 +54,7 @@ class Second_Activity : AppCompatActivity() {
         val mypage = manager.findFragmentByTag(TAG_MYPAGE)
         val home = manager.findFragmentByTag(TAG_HOME)
         val review = manager.findFragmentByTag(TAG_REVIEW)
-
+        //조건문을 통해 클릭했을 때의 상황을 보여준다
         if (mypage != null){
             fragTransaction.hide(mypage)
         }

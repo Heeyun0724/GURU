@@ -81,7 +81,7 @@ class ChangeMember : AppCompatActivity() {
 
             }
 
-
+            //취소 버튼을 누르면 전 페이지로 넘어간다.
             cancel_Btn.setOnClickListener {
                 val intent = Intent(this, Second_Activity::class.java)
                 startActivity(intent)

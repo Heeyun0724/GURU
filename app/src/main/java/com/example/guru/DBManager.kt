@@ -11,12 +11,14 @@ class  DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Curso
     SQLiteOpenHelper(context, name, factory, version) {
     override fun onCreate(db: SQLiteDatabase?) {
         if (db != null) {
+            //멤버 DB 제작
             db.execSQL(
                 "CREATE TABLE MEMBER(NAME TEST," +
                         "ID TEXT, PASSWORD TEXT, PASSWORD_OK TEXT, PHONE TEXT, EMAIL TEXT, ADDRESS TEXT, LEVEL TEXT);"
 
 
             )
+            //리뷰 DB 제작
             db!!.execSQL("CREATE TABLE REVIEW ( bName TEXT , rStar TEXT ,rContent TEXT);")
 
         }
@@ -108,6 +110,7 @@ class  DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Curso
                     + cursor.getString(1)
                     + "\n[리   뷰] \n"
                     + cursor.getString(2)
+                    +"\n"
                     + "-------------------------------------")
 
         }

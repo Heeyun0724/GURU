@@ -62,14 +62,14 @@ class MypageFragment : Fragment() {
             val intent = Intent(context, ChangeMember::class.java)
             startActivity(intent)
         }
-
+        //문냥도서관 소개 버튼을 클릭하면 라이브러리 소개 페이지로 넘어감
         libraryinfoButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
                 val intent = Intent(context, InfoLibraryActivity::class.java)
                 startActivity(intent)
             }
         })
-
+        //로그아웃 버튼을 누르면 첫 화면으로 넘어감
         logoutButton.setOnClickListener(object :View.OnClickListener {
             override fun onClick(v: View?) {
                 val intent = Intent(context, MainActivity::class.java)
