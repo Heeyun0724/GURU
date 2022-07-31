@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 
 private const val NUM_PAGES = 3
 
@@ -18,6 +19,10 @@ class HomeFragment : Fragment() {
     lateinit var societyImage: ImageView
     lateinit var essayImage: ImageView
     lateinit var searchButton: Button
+    lateinit var technologyText: TextView
+    lateinit var literatureText: TextView
+    lateinit var societyText: TextView
+    lateinit var essayText: TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,9 +42,18 @@ class HomeFragment : Fragment() {
         societyImage = view.findViewById<ImageView>(R.id.societyImage)
         essayImage = view.findViewById<ImageView>(R.id.essayImage)
         searchButton = view.findViewById(R.id.searchButton)
+        technologyText = view.findViewById(R.id.technologyText)
+        literatureText = view.findViewById(R.id.literatureText)
+        societyText = view.findViewById(R.id.societyText)
+        essayText = view.findViewById(R.id.essayText)
 
         //기술 이미지 클릭 시 기술분야 베스트리뷰 페이지로 이동
         technologyImage.setOnClickListener{
+            var intent = Intent(getActivity(), TechnologyActivity::class.java)
+            startActivity(intent)
+        }
+        //기술 텍스트 클릭 시 기술분야 베스트리뷰 페이지로 이동
+        technologyText.setOnClickListener {
             var intent = Intent(getActivity(), TechnologyActivity::class.java)
             startActivity(intent)
         }
@@ -48,13 +62,28 @@ class HomeFragment : Fragment() {
             var intent = Intent(getActivity(), LiteratureActivity::class.java)
             startActivity(intent)
         }
+        //문학 텍스트 클릭 시 기술분야 베스트리뷰 페이지로 이동
+        literatureText.setOnClickListener{
+            var intent = Intent(getActivity(), LiteratureActivity::class.java)
+            startActivity(intent)
+        }
         //사회 이미지 클릭 시 사회분야 베스트리뷰 페이지로 이동
         societyImage.setOnClickListener{
             var intent = Intent(getActivity(), SocietyActivity::class.java)
             startActivity(intent)
         }
+        //사회 텍스트 클릭 시 기술분야 베스트리뷰 페이지로 이동
+        societyText.setOnClickListener{
+            var intent = Intent(getActivity(), SocietyActivity::class.java)
+            startActivity(intent)
+        }
         //에세이 이미지 클릭 시 에세이분야 베스트리뷰 페이지로 이동
         essayImage.setOnClickListener{
+            var intent = Intent(getActivity(), EssayActivity::class.java)
+            startActivity(intent)
+        }
+        //에세이 텍스트 클릭 시 기술분야 베스트리뷰 페이지로 이동
+        essayText.setOnClickListener{
             var intent = Intent(getActivity(), EssayActivity::class.java)
             startActivity(intent)
         }
