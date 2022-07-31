@@ -37,7 +37,7 @@ class BookNameListAdapter(var books: ArrayList<Book>, var context: Context) :
                     var book=filteredBook[position]
                     setTitle(book.bookname)
                     setMessage(book.author)
-                    setPositiveButton("리뷰 확인", DialogInterface.OnClickListener { dialog, which ->
+                    setPositiveButton("베스트 리뷰 카테고리에서 확인 가능", DialogInterface.OnClickListener { dialog, which ->
                         Toast.makeText(context, "${book.bookname}", Toast.LENGTH_SHORT).show()
                     })
 
