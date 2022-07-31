@@ -13,7 +13,7 @@ class  DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Curso
         if (db != null) {
             //멤버 DB 제작
             db.execSQL(
-                "CREATE TABLE MEMBER(NAME TEST," +
+                "CREATE TABLE MEMBER(NAME TEXT," +
                         "ID TEXT, PASSWORD TEXT, PASSWORD_OK TEXT, PHONE TEXT, EMAIL TEXT, ADDRESS TEXT, LEVEL TEXT);"
 
 
@@ -55,13 +55,13 @@ class  DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Curso
 
 
     fun update(
-        name: String, id: String, password: String, password_ok: String, phone: String, email: String,
+        name: String, password: String, password_ok: String, phone: String, email: String,
         address: String, level: String
     ) {
         var db: SQLiteDatabase = writableDatabase
 
         db.execSQL(
-            "UPDATE MEMBER SET ID = " + "'" + id + "'" + ", PASSWORD = '" + password + "'" + ", PASSWORD_OK = '" + password_ok + "'" + ", PHONE = '" + phone + "'"
+            "UPDATE MEMBER SET PASSWORD = " + "'" + password + "'" + ", PASSWORD_OK = '" + password_ok + "'" + ", PHONE = '" + phone + "'"
                     + ", EMAIL = '" + email + "'" + ", ADDRESS = '" + address + "'" + ", LEVEL = '" + level + "'" +
                     "WHERE NAME = '" + name + "';"
         )
@@ -139,22 +139,4 @@ class  DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Curso
 
         return false
     }
-
-    fun getResult2(name: String): Boolean {
-        var db: SQLiteDatabase = readableDatabase
-        var result: String = ""
-
-        var cursor: Cursor = db.rawQuery("SELECT ID FROM MEMBER", null)
-        while (cursor.moveToNext()) {
-            result = (cursor.getString(0))
-            if (result.equals(name)) {
-               return true
-            }else {
-
-            }
-        }
-
-        return false
-    }
-
 }
