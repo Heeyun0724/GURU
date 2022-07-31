@@ -39,7 +39,7 @@
         android:textColorHighlight="#FFFFFF"
         android:textSize="23sp"
         android:textStyle="bold"
-        android:fontFamily="@font/kopubworlddotum"
+        android:fontFamily="@font/kotrabold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -136,7 +136,7 @@
         android:layout_height="89dp"
         android:layout_marginStart="5dp"
         android:layout_marginBottom="35dp"
-        android:text="재미와 감동을 동시에 주는 책!\n한 번 읽으면 멈추지 못하고 계속 읽게 됨.\n주변에서 볼 수 있는 사람들의 이야기라 더 집중해서 읽을 수 있었음.\n한국 소설을 좋아하는 사람들은 한 번쯤 꼭 읽어보는 걸 추천!"
+        android:text="재미와 감동을 동시에 주는 책!\n한 번 읽으면 멈추지 못하고 계속 읽게 됨.\n주변에서 볼 수 있는 사람들의 이야기라 \n더 집중해서 읽을 수 있었음.\n한국 소설을 좋아하는 사람들은 한 번쯤 꼭 읽어보는 걸 추천!"
         android:textColor="#000000"
         android:textSize="10sp"
         android:fontFamily="@font/kopubworlddotum"
@@ -241,7 +241,7 @@
         android:layout_height="92dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
-        android:text="누구나 부러워하는 완벽한 부부의 아무도 모르는 끔찍한 세계를 표현한 책\n믿고 보는 패리스의 책! 서사 초반부터 독자의 주의를 휘어잡는 금반전 상황의 설정으로 책을 읽는 내내 긴장감을 놓치지 않고 읽을 수 있음.\n스릴러를 좋아하는 사람이라면 누구나 좋아할 만함!"
+        android:text="누구나 부러워하는 완벽한 부부의 아무도 모르는 \n끔찍한 세계를 표현한 책\n믿고 보는 패리스의 책! 서사 초반부터 독자의 주의를 휘어잡는 \n금반전 상황의 설정으로 책을 읽는 내내 긴장감을 \n놓치지 않고 읽을 수 있음.\n스릴러를 좋아하는 사람이라면 누구나 좋아할 만함!"
         android:textColor="#000000"
         android:textSize="10sp"
         android:fontFamily="@font/kopubworlddotum"
@@ -359,4 +359,46 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bestReview4" />
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginBottom="16dp"
+        android:background="#303F9F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="63dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.433"
+        app:srcCompat="@drawable/thrill_cat" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="39dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/book_cat" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="72dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view14"
+        app:srcCompat="@drawable/detective_cat" />
 </androidx.constraintlayout.widget.ConstraintLayout>
