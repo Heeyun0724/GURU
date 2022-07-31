@@ -140,14 +140,14 @@ class  DBManager(context: Context?, name: String?, factory: SQLiteDatabase.Curso
         return false
     }
 
-    fun getResult2(ID: String): Boolean {
+    fun getResult2(name: String): Boolean {
         var db: SQLiteDatabase = readableDatabase
         var result: String = ""
 
         var cursor: Cursor = db.rawQuery("SELECT ID FROM MEMBER", null)
         while (cursor.moveToNext()) {
             result = (cursor.getString(0))
-            if (result.equals(ID)) {
+            if (result.equals(name)) {
                return true
             }else {
 
