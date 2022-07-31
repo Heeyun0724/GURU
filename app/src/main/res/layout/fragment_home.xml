@@ -10,115 +10,157 @@
         android:id="@+id/searchButton"
         android:layout_width="310dp"
         android:layout_height="55dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/btn_background"
-        android:drawableLeft="@drawable/list_icon"
+        android:drawableLeft="@drawable/search_icon"
         android:fontFamily="@font/kotrabold"
         android:paddingLeft="20dp"
-        android:text="리뷰 검색하기"
+        android:text="베스트 리뷰 검색하기"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view4"
+        app:layout_constraintTop_toBottomOf="@+id/technologyText"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/technologyImage"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toStartOf="@+id/literatureImage"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view5"
-        app:srcCompat="@drawable/technology" />
+        app:layout_constraintTop_toBottomOf="@+id/Cat"
+        app:srcCompat="@drawable/technology"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/literatureImage"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toStartOf="@+id/societyImage"
         app:layout_constraintStart_toEndOf="@+id/technologyImage"
-        app:layout_constraintTop_toBottomOf="@+id/view5"
-        app:srcCompat="@drawable/literature" />
+        app:layout_constraintTop_toBottomOf="@+id/Cat"
+        app:srcCompat="@drawable/literature"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/societyImage"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/essayImage"
         app:layout_constraintStart_toEndOf="@+id/literatureImage"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.701"
+        app:layout_constraintTop_toBottomOf="@+id/Cat"
         app:srcCompat="@drawable/society" />
 
     <ImageView
         android:id="@+id/essayImage"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/societyImage"
-        app:layout_constraintTop_toBottomOf="@+id/view5"
-        app:srcCompat="@drawable/essay" />
-
-    <View
-        android:id="@+id/view4"
-        android:layout_width="wrap_content"
-        android:layout_height="2dp"
-        android:layout_marginTop="20dp"
-        android:background="#303F9F"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/societyImage" />
-
-    <View
-        android:id="@+id/view5"
-        android:layout_width="wrap_content"
-        android:layout_height="2dp"
-        android:layout_marginBottom="20dp"
-        android:background="#303F9F"
-        app:layout_constraintBottom_toTopOf="@+id/societyImage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/Cat"
+        app:srcCompat="@drawable/essay"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/Cat"
-        android:layout_width="match_parent"
-        android:layout_height="320dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="350dp"
+        android:layout_height="283dp"
         android:src="@drawable/main_cat"
-        app:layout_constraintBottom_toTopOf="@+id/view5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
+        android:fontFamily="@font/kotrabold"
         android:text="BEST REVIEW"
-        android:textColor="#303F9F"
-        android:textSize="25dp"
+        android:textColor="@color/maincolor"
+        android:textSize="30dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/view5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Cat"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/technologyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/kotrabold"
+        android:text="기술"
+        android:textColor="@color/maincolor"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/searchButton"
+        app:layout_constraintEnd_toStartOf="@+id/literatureText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/technologyImage"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/literatureText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/kotrabold"
+        android:text="문학"
+        android:textColor="@color/maincolor"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/societyText"
+        app:layout_constraintStart_toEndOf="@+id/technologyText"
+        app:layout_constraintTop_toBottomOf="@+id/literatureImage"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/societyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="5dp"
+        android:fontFamily="@font/kotrabold"
+        android:text="사회"
+        android:textColor="@color/maincolor"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/essayText"
+        app:layout_constraintStart_toEndOf="@+id/literatureText"
+        app:layout_constraintTop_toBottomOf="@+id/societyImage"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/essayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="45dp"
+        android:fontFamily="@font/kotrabold"
+        android:text="에세이"
+        android:textColor="@color/maincolor"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/societyText"
+        app:layout_constraintTop_toBottomOf="@+id/essayImage"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
