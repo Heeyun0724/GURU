@@ -90,7 +90,7 @@ class BookNameListAdapter(var books: ArrayList<Book>, var context: Context) :
 
             val filteredList : ArrayList<Book> = ArrayList<Book>()
 
-            if(filterString.trim {it <= ' '}.isEmpty()){ //검색어가 없을 경우 원본 배열 보여주기
+            if(filterString.trim {it <= ' '}.isEmpty()){ //검색어가 없을 경우 원본 리스트 보여주기
                 results.values = books
                 results.count = books.size
 
@@ -115,7 +115,7 @@ class BookNameListAdapter(var books: ArrayList<Book>, var context: Context) :
         @SuppressLint("NotifyDataSetChanged")
         override fun publishResults(charSequence: CharSequence?, filterResults: FilterResults) {
             //performfiltering이 반환한 filterresult클래스를 매개변수로 받아서 처리하는 함수
-            filteredBook.clear() //어댑터 클래스에 선언한 복제 배열 초기화 후
+            filteredBook.clear() //어댑터 클래스에 선언한 복제 리스트 초기화 후
             filteredBook.addAll(filterResults.values as ArrayList<Book>) //검색 결과의 값을 복사하고
             notifyDataSetChanged() //값이 바뀌었음을 알리기
         }
