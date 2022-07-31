@@ -35,11 +35,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
         android:text="BEST REIVEW"
-        android:textColor="#303F9F"
+        android:textColor="@color/maincolor"
         android:textColorHighlight="#FFFFFF"
         android:textSize="23sp"
         android:textStyle="bold"
-        android:fontFamily="@font/kopubworlddotum"
+        android:fontFamily="@font/kotrabold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -238,7 +238,7 @@
         android:layout_height="93dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
-        android:text="독자들에게 주체적인 삶의 태도와 자세를 전해온 독보적인 그림 에세이!\n바닥에 가라앉아 있다고 생각하는 사람들에게 바닥을 딛고 떠올라 저만의 방향으로 더 높이, 더 멀리 헤엄칠 수 있는 힘과 희망을 전해준다.\n자신을 탐색하고 싶은 독자들에게 추천!"
+        android:text="독자들에게 주체적인 삶의 태도와 자세를 전해온 \n독보적인 그림 에세이!\n바닥에 가라앉아 있다고 생각하는 사람들에게 바닥을 딛고 떠올라 저만의 방향으로 더 높이, \n더 멀리 헤엄칠 수 있는 힘과 희망을 전해준다.\n자신을 탐색하고 싶은 독자들에게 추천!"
         android:textColor="#000000"
         android:textSize="10sp"
         android:fontFamily="@font/kopubworlddotum"
@@ -337,7 +337,7 @@
         android:layout_height="93dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        android:text="이 책은 일화와 철학적 내용을 통해 모든 고통과 불행의 원인인 '자기 자신'이라는 감오겡서 나와 '나는 누구인지'를 깨닫고 진정한 삶으로 다시 떠오르는 길을 제시한다.\n'나'에 대해 생각하게 되는 책으로, 나에 대한 방황이 있을 때 추천하는 책.\n선물용으로도 최고!"
+        android:text="이 책은 일화와 철학적 내용을 통해 모든 고통과 불행의 원인인 \n'자기 자신'이라는 감오겡서 나와 '나는 누구인지'를 깨닫고 \n진정한 삶으로 다시 떠오르는 길을 제시한다.\n'나'에 대해 생각하게 되는 책으로, \n나에 대한 방황이 있을 때 추천하는 책.\n선물용으로도 최고!"
         android:textColor="#000000"
         android:textSize="10sp"
         android:fontFamily="@font/kopubworlddotum"
@@ -354,5 +354,48 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bestReview3" />
+
+    <View
+        android:id="@+id/view16"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="#303F9F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/life_review" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/happy_cat" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="63dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view12"
+        app:srcCompat="@drawable/swim_cat" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="82dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="124dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/library_info_cat" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
