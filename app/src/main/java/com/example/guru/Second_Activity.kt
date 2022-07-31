@@ -1,8 +1,14 @@
 package com.example.guru
 
+import android.app.PendingIntent.getActivity
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.util.AttributeSet
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -41,6 +47,27 @@ class Second_Activity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item?.itemId) {
+            R.id.myPageItem -> {
+                Toast.makeText(this, "마이 페이지 선택 됨", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, Second_Activity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.myHomeItem -> {
+                Toast.makeText(this, "베스트 리뷰 선택 됨", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, SearchActivity::class.java)
+                startActivity(intent)
+                return true
+            }
+            R.id.writeReviewItem -> {
+                Toast.makeText(this, "리뷰 작성 선택 됨", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, ReviewWrite::class.java)
+                startActivity(intent)
+                return true
+            }
+        }
+
         return super.onOptionsItemSelected(item)
     }
     private fun setFragment(tag: String, fragment: Fragment) {
