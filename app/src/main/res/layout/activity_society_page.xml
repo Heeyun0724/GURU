@@ -40,7 +40,7 @@
         android:textColorHighlight="#FFFFFF"
         android:textSize="23sp"
         android:textStyle="bold"
-        android:fontFamily="@font/kopubworlddotum"
+        android:fontFamily="@font/kotrabold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -137,7 +137,7 @@
         android:layout_height="89dp"
         android:layout_marginStart="4dp"
         android:layout_marginBottom="32dp"
-        android:text="&quot;역사는 행동하는 사람들에 의해 쓰인다. 내 의지가 그 시기를 앞당기리라고 믿는다.&quot;\n이 책을 통해 검찰 조직의 어두운 면과 이를 걷어내고자 하는 저자의 각오와 용기, 그리고 그 과정에서 내부 고발자의 힘겨움과 아픔을 느낄 수 있다는 점이 좋았다."
+        android:text="&quot;역사는 행동하는 사람들에 의해 쓰인다. \n내 의지가 그 시기를 앞당기리라고 믿는다.&quot;\n이 책을 통해 검찰 조직의 어두운 면과 이를 걷어내고자 \n하는 저자의 각오와 용기, 그리고 그 과정에서 내부 고발자의 힘겨움과 아픔을 느낄 수 있다는 점이 좋았다."
         android:textColor="#000000"
         android:textSize="10sp"
         android:fontFamily="@font/kopubworlddotum"
@@ -336,7 +336,7 @@
         android:layout_height="88dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
-        android:text="지구온난화와 식량위기의 직접적 인과관계를 세밀하게 분석한 책이다.\n이 책을 읽은 후 지구온난화와 식량에 대한 밀접적인 관계를 깨닫고 이에대해 더 진지하게 생각해 본다면 지구에 남은 희망이 있을지도 모른다."
+        android:text="지구온난화와 식량위기의 직접적 인과관계를 세밀하게 분석했다.\n이 책을 읽은 후 지구온난화와 식량에 대한 밀접적인 관계를 \n깨닫고 이에 대해 더 진지하게 생각해 본다면 지구에 남은 희망이 있을지도 모른다."
         android:textColor="#000000"
         android:textSize="10sp"
         android:fontFamily="@font/kopubworlddotum"
@@ -352,5 +352,48 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bestReview2" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="16dp"
+        android:background="#303F9F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/society" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="87dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/info_correct_cat" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="87dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="416dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/info_correct_cat" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="98dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/politics"
+        app:srcCompat="@drawable/fast_cat" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
