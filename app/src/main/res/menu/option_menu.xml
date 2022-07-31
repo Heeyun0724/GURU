@@ -9,7 +9,7 @@
 
     <item
         android:id="@+id/myHomeItem"
-        android:title="홈"
+        android:title="베스트 리뷰"
         android:icon="@drawable/ic_baseline_home_24"/>
 
     <item
