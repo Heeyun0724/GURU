@@ -89,9 +89,18 @@ class SearchActivity : AppCompatActivity() {
     fun tempBook() : ArrayList<Book>{
 
         var tempBooks = ArrayList<Book>()
-        tempBooks.add(Book(1,"지구 끝의 온실", "김초엽"))
-        tempBooks.add(Book(2,"1984", "조지 오웰"))
-        tempBooks.add(Book(3,"지구에서 한아뿐", "정세랑"))
+        tempBooks.add(Book(1,"곰돌이 푸, 행복한 일은 매일 있어", "곰돌이 푸 (원작)"))
+        tempBooks.add(Book(2,"매일을 헤엄치는 법", "이연"))
+        tempBooks.add(Book(3,"삶에서 다시 떠오르기", "에그하르트 톨레"))
+        tempBooks.add(Book(4,"계속 가보겠습니다", "임은정"))
+        tempBooks.add(Book(5,"왜 지금 한국인가", "가재산, 김기진"))
+        tempBooks.add(Book(6,"식량위기 대한민국", "남재작"))
+        tempBooks.add(Book(7,"인공지능 시대의 건축", "김성아"))
+        tempBooks.add(Book(8,"처음 읽는 플랜트 엔지니어링 이야기", "박정호"))
+        tempBooks.add(Book(9,"구글 엔지니어는 이렇게 일한다", "타이터스 윈터스, 톰 맨쉬랙 외1"))
+        tempBooks.add(Book(10,"불편한 편의점", "김호연"))
+        tempBooks.add(Book(11,"비하인드 도어", "B. A. 패리스"))
+        tempBooks.add(Book(12,"아노말리", "에르베 르 텔리에"))
 
         return tempBooks
     }
